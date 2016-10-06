@@ -14,6 +14,12 @@
     <string name="button_progress">Progress</string>
     <string name="button_comparison">Comparison</string>
     <string name="recentHealthInfo">Recent Health Information</string>
+    <string name="text_fieldLeftBlank">Blank</string>
+    <string name="text_current">Current</string>
+    <string name="text_older">Older</string>
+    <string name="text_you">You</string>
+    <string name="text_friend">Friend</string>
+    <string name="edit_friendsUsername">Enter Friend's Username</string>
     <string-array name="infoType_spinner_array">
         <item>Type1</item>
         <item>Type2</item>

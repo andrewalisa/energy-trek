@@ -6,34 +6,139 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@string/radio_water"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@string/radio_calories"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_sleep"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/healthInfoButton"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:text="@string/button_healthInfo"
-            android:gravity="center_horizontal|center"
-            android:onClick="enterHealthInfo" />
-        <Button
-            android:id="@+id/goalsButton"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:text="@string/button_goals"
-            android:gravity="center_horizontal|center"
-            android:onClick="goals" />
-        <Button
-            android:id="@+id/comparisonButton"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:text="@string/button_comparison"
-            android:gravity="center_horizontal|center"
-            android:onClick="comparison" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="left"
+                android:text="@string/text_older"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/olderField1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:hint="@string/text_fieldLeftBlank"/>
+
+            <EditText
+                android:id="@+id/olderField2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/text_fieldLeftBlank" />
+
+            <EditText
+                android:id="@+id/olderField3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/text_fieldLeftBlank"/>
+
+            <EditText
+                android:id="@+id/olderField4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:hint="@string/text_fieldLeftBlank"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="@string/text_current"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/currentField1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:hint="@string/text_fieldLeftBlank"/>
+
+                <EditText
+                    android:id="@+id/currentField2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:hint="@string/text_fieldLeftBlank" />
+
+                <EditText
+                    android:id="@+id/currentField3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:hint="@string/text_fieldLeftBlank"/>
+
+                <EditText
+                    android:id="@+id/currentField4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:hint="@string/text_fieldLeftBlank"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_menu"
+        android:layout_gravity="start"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="50dp"
+        android:onClick="menu" />
 </LinearLayout>

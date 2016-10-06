@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioButton;
 
 public class GoalsActivity extends AppCompatActivity {
 
@@ -13,21 +14,33 @@ public class GoalsActivity extends AppCompatActivity {
         setContentView(com.example.chase.EnergyTrek.R.layout.activity_goals);
     }
 
-    /** Called when the user clicks the Enter Health Info. button */
-    public void enterHealthInfo(View view) {
-        Intent healthInfoIntent = new Intent(this, HealthInfoActivity.class);
-        startActivity(healthInfoIntent);
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_water:
+                if (checked)
+                    break;
+            case R.id.radio_calories:
+                if (checked)
+                    break;
+            case R.id.radio_sleep:
+                if (checked)
+                    break;
+        }
     }
 
-    /** Called when the user clicks the Progress button */
-    public void progress(View view) {
+    /** Called when the user clicks the Menu button */
+    public void menu(View view) {
+        Intent mainIntent = new Intent(this, MainActivity.class);
+        startActivity(mainIntent);
+    }
+
+    /** Called when the user clicks the Enter button */
+    public void enter(View view) {
         Intent progressIntent = new Intent(this, ProgressActivity.class);
         startActivity(progressIntent);
-    }
-
-    /** Called when the user clicks the Comparison button */
-    public void comparison(View view) {
-        Intent comparisonIntent = new Intent(this, ComparisonActivity.class);
-        startActivity(comparisonIntent);
     }
 }
