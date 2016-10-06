@@ -15,11 +15,13 @@
         <RadioButton android:id="@+id/radio_water"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
             android:text="@string/radio_water"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/radio_calories"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
             android:text="@string/radio_calories"
             android:onClick="onRadioButtonClicked"/>
         <RadioButton android:id="@+id/radio_sleep"
@@ -71,7 +73,7 @@
             android:layout_gravity="start"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="120dp"
-            android:onClick="main" />
+            android:onClick="menu" />
 
     </LinearLayout>
 </LinearLayout>
