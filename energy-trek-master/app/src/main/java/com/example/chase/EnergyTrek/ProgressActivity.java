@@ -7,26 +7,26 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-public class ComparisonActivity extends AppCompatActivity {
+public class ProgressActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comparison);
+        setContentView(com.example.chase.EnergyTrek.R.layout.activity_progress);
     }
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
-        EditText label1 = (EditText) findViewById(R.id.youField1);
-        EditText label2 = (EditText) findViewById(R.id.youField2);
-        EditText label3 = (EditText) findViewById(R.id.youField3);
-        EditText label4 = (EditText) findViewById(R.id.youField4);
-        EditText label5 = (EditText) findViewById(R.id.friendField1);
-        EditText label6 = (EditText) findViewById(R.id.friendField2);
-        EditText label7 = (EditText) findViewById(R.id.friendField3);
-        EditText label8 = (EditText) findViewById(R.id.friendField4);
+        EditText label1 = (EditText) findViewById(R.id.olderField1);
+        EditText label2 = (EditText) findViewById(R.id.olderField2);
+        EditText label3 = (EditText) findViewById(R.id.olderField3);
+        EditText label4 = (EditText) findViewById(R.id.olderField4);
+        EditText label5 = (EditText) findViewById(R.id.currentField1);
+        EditText label6 = (EditText) findViewById(R.id.currentField2);
+        EditText label7 = (EditText) findViewById(R.id.currentField3);
+        EditText label8 = (EditText) findViewById(R.id.currentField4);
 
         // Check which radio button was clicked
         switch(view.getId()) {
@@ -38,8 +38,8 @@ public class ComparisonActivity extends AppCompatActivity {
                     label5.setHint("Cups of water per day");
                     label6.setHint("Time between cups (in hours?)");
                     label7.setHint("Amount of caffeine had");
-                    label4.setHint("");
-                    label8.setHint("");
+                label4.setHint("");
+                label8.setHint("");
                 break;
             case R.id.radio_calories:
                 if (checked)
@@ -49,8 +49,8 @@ public class ComparisonActivity extends AppCompatActivity {
                     label5.setHint("Amount of calories per day");
                     label6.setHint("Meals per day");
                     label7.setHint("Time between meals");
-                    label4.setHint("");
-                    label8.setHint("");
+                label4.setHint("");
+                label8.setHint("");
                 break;
             case R.id.radio_sleep:
                 if (checked)
@@ -60,8 +60,9 @@ public class ComparisonActivity extends AppCompatActivity {
                     label5.setHint("Amount of calories per day");
                     label6.setHint("Meals per day");
                     label7.setHint("Time between meals");
-                    label4.setHint("");
-                    label8.setHint("");
+                label4.setHint("");
+                label8.setHint("");
+                break;
         }
     }
 
@@ -69,11 +70,5 @@ public class ComparisonActivity extends AppCompatActivity {
     public void menu(View view) {
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
-    }
-
-    /** Called when the user clicks the Enter button */
-    public void enter(View view) {
-        Intent progressIntent = new Intent(this, ProgressActivity.class);
-        startActivity(progressIntent);
     }
 }
