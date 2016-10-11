@@ -12,7 +12,7 @@ public class ProgressActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_progress);
+        setContentView(com.example.chase.EnergyTrek.R.layout.activity_progress);
     }
 
     public void onRadioButtonClicked(View view) {
@@ -70,11 +70,5 @@ public class ProgressActivity extends AppCompatActivity {
     public void menu(View view) {
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
-    }
-
-    /** Called when the user clicks the Enter button */
-    public void enter(View view) {
-        Intent progressIntent = new Intent(this, ProgressActivity.class);
-        startActivity(progressIntent);
     }
 }

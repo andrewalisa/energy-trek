@@ -14,7 +14,7 @@ import static android.R.attr.category;
 
 public class HealthInfoActivity extends AppCompatActivity {
 
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.example.chase.EnergyTrek.R.layout.activity_health_info);
