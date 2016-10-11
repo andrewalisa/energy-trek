@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Main Page</string>
+    <string name="healthInfoActivityTitle">Enter Health Information</string>
+    <string name="radio_water">Water</string>
+    <string name="radio_calories">Calories</string>
+    <string name="radio_sleep">Sleep</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_menu">Menu</string>
+    <string name="button_enter">Enter</string>
+    <string name="edit_calories">Calories Consumed?</string>
+    <string name="edit_time">Time?</string>
+    <string name="button_healthInfo">Enter Health Info.</string>
+    <string name="button_goals">Goals</string>
+    <string name="button_progress">Progress</string>
+    <string name="button_comparison">Comparison</string>
+    <string name="recentHealthInfo">Recent Health Information</string>
+    <string name="text_fieldLeftBlank">Blank</string>
+    <string name="text_current">Current</string>
+    <string name="text_older">Older</string>
+    <string name="text_you">You</string>
+    <string name="text_friend">Friend</string>
+    <string name="edit_friendsUsername">Enter Friends Username</string>
+    <string-array name="infoType_spinner_array">
+        <item>Type1</item>
+        <item>Type2</item>
+        <item>Type3</item>
+    </string-array>
+</resources>
