@@ -50,10 +50,6 @@ public class HealthInfoActivity extends AppCompatActivity {
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
     }
+    
 
-    /** Called when the user clicks the Enter button */
-    public void enter(View view) {
-        Intent progressIntent = new Intent(this, ProgressActivity.class);
-        startActivity(progressIntent);
-    }
 }
