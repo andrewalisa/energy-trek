@@ -27,18 +27,28 @@
 
         <activity
             android:name=".HealthInfoActivity"
-            android:label="@string/healthInfoActivityTitle"></activity>
+            android:label="@string/healthInfoActivityTitle">
+        </activity>
+
         <activity
             android:name=".GoalsActivity"
-            android:label="@string/button_goals"></activity>
+            android:label="@string/button_goals">
+        </activity>
+
         <activity
             android:name=".ProgressActivity"
-            android:label="@string/button_progress"></activity>
+            android:label="@string/button_progress">
+        </activity>
+
         <activity
             android:name=".ComparisonActivity"
-            android:label="@string/button_comparison"></activity>
+            android:label="@string/button_comparison">
+        </activity>
         
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
     </application>
 
 </manifest>
