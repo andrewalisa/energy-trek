@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/recentHealthInfo"
-        android:layout_weight="0"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <LinearLayout
