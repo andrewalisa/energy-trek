@@ -8,7 +8,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_radioButtonTitle"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -16,6 +24,7 @@
             android:layout_marginTop="30dp"
             android:gravity="center"
             android:orientation="horizontal">
+
             <RadioButton android:id="@+id/radio_water"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
