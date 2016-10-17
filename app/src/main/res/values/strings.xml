@@ -19,7 +19,7 @@
     <string name="text_older">Older</string>
     <string name="text_you">You</string>
     <string name="text_friend">Friend</string>
-    <string name="edit_friendsUsername">Enter Friends Username</string>
+    <string name="edit_friendsUsername">Enter Friend's Username</string>
     <string-array name="infoType_spinner_array">
         <item>Type1</item>
         <item>Type2</item>

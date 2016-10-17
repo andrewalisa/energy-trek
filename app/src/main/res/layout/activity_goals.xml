@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RadioGroup
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -36,8 +36,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.15"
         android:layout_gravity="start"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/calories"
@@ -53,14 +52,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="@string/edit_time" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/property3"
-            android:layout_weight="0.09" />
 
         <Button
             android:id="@+id/enterButton"
