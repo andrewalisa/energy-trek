@@ -16,7 +16,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_marginTop="143dp"
-        android:id="@+id/textUsername"
+        android:id="@+id/txtUsername"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:hint="Username" />
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonLogin"
-        android:layout_below="@+id/textPassword"
+        android:layout_below="@+id/txtPassword"
         android:layout_centerHorizontal="true"
         android:onClick="authenticateLogin" />
 
@@ -35,10 +35,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/textPassword"
+        android:id="@+id/txtPassword"
         android:hint="Password"
-        android:layout_below="@+id/textUsername"
-        android:layout_alignLeft="@+id/textUsername"
-        android:layout_alignStart="@+id/textUsername" />
+        android:layout_below="@+id/txtUsername"
+        android:layout_alignLeft="@+id/txtUsername"
+        android:layout_alignStart="@+id/txtUsername" />
 
 </RelativeLayout>

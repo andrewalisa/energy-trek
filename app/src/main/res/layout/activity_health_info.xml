@@ -59,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
+            android:inputType="phone"
             android:hint="@string/edit_calories"/>
 
         <EditText
@@ -66,6 +67,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:inputType="phone"
             android:hint="@string/edit_time" />
 
         <Button
