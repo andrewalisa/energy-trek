@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+<<<<<<< HEAD
 import android.widget.Button;
 import android.widget.EditText;
+=======
+>>>>>>> dan
 import android.widget.Spinner;
 import android.widget.RadioButton;
 
@@ -29,14 +32,11 @@ public class HealthInfoActivity extends AppCompatActivity {
         //1 is water, 2 is calories, 3 is sleep
         boolean checked = ((RadioButton) view).isChecked();
 
-        EditText label1 = (EditText) findViewById(R.id.calories);
-        EditText label2 = (EditText) findViewById(R.id.time);
-
-
         // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.radio_water:
                 if (checked)
+<<<<<<< HEAD
                     Category = 1;
                 label1.setHint("How much water did you drink");
                 label2.setHint("At what time?");
@@ -53,6 +53,15 @@ public class HealthInfoActivity extends AppCompatActivity {
                 label1.setHint("How long did you sleep?");
                 label2.setHint("At what time?");
                 break;
+=======
+                    break;
+            case R.id.radio_calories:
+                if (checked)
+                    break;
+            case R.id.radio_sleep:
+                if (checked)
+                    break;
+>>>>>>> dan
         }
 
     }

@@ -7,13 +7,18 @@
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".loginActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"/>
+
+                <category
+                    android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
         </activity>
 
@@ -26,6 +31,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
+<<<<<<< HEAD
             android:name=".HealthInfoActivity"
             android:label="@string/healthInfoActivityTitle">
         </activity>
@@ -50,5 +56,26 @@
 
         </activity>
     </application>
+=======
+            android:label="@string/healthInfoActivityTitle"
+            android:name=".HealthInfoActivity">
+        </activity>
 
+        <activity
+            android:label="@string/button_goals"
+            android:name=".GoalsActivity">
+        </activity>
+
+        <activity
+            android:label="@string/button_progress"
+            android:name=".ProgressActivity">
+        </activity>
+
+        <activity
+            android:label="@string/button_comparison"
+            android:name=".ComparisonActivity">
+        </activity>
+>>>>>>> dan
+
+    </application>
 </manifest>
