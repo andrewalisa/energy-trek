@@ -44,17 +44,12 @@
 
         <activity
             android:name=".GoalsActivity"
-            android:label="Daily Progress">
+            android:label="Today">
         </activity>
 
         <activity
-            android:name=".ProgressActivity"
-            android:label="Recommended Goals">
-        </activity>
-
-        <activity
-            android:name=".ComparisonActivity"
-            android:label="Friendly Comparison">
+            android:name=".PreviousTreksActivity"
+            android:label="Previous Treks">
         </activity>
 
 

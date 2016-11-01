@@ -12,7 +12,7 @@ public class GoalsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.chase.EnergyTrek.R.layout.activity_goals);
+        setContentView(com.example.chase.EnergyTrek.R.layout.activity_today);
     }
 
     public void onRadioButtonClicked(View view) {
@@ -54,7 +54,7 @@ public class GoalsActivity extends AppCompatActivity {
 
     /** Called when the user clicks the Enter button */
     public void enter(View view) {
-        Intent progressIntent = new Intent(this, ProgressActivity.class);
+        Intent progressIntent = new Intent(this, PreviousTreksActivity.class);
         startActivity(progressIntent);
     }
 }
