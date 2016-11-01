@@ -73,7 +73,7 @@ public class loginActivity extends AppCompatActivity {
         String loginName = "admin%$admin";
         //loginName = username.getName();
         //check.getUsername(checkName);
-        loginName2 = username.getName();
+        //loginName2 = username.getName();
         //while(x != 0){
         //check.getUsername(loginName);
         //checkName = username.getName();

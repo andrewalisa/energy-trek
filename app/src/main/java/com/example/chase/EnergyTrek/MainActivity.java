@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.chase.EnergyTrek.R.layout.activity_main);
+        setContentView(com.example.chase.EnergyTrek.R.layout.activity_mainconstraint);
     }
 
     /** Called when the user clicks the Enter Health Info. button */

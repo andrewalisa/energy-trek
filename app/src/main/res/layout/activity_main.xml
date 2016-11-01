@@ -1,63 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/recentInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="center"
-        android:text="@string/recentHealthInfo"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <Button
+        android:id="@+id/button4"
+        android:layout_height="50dp"
+        android:text="@string/button_progress"
+        android:gravity="center_horizontal|center"
+        android:onClick="progress"
+        android:layout_width="170dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintLeft_toLeftOf="@+id/button2" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+    <Button
+        android:id="@+id/button3"
+        android:layout_height="50dp"
+        android:text="@string/button_comparison"
+        android:gravity="center_horizontal|center"
+        android:onClick="comparison"
+        android:layout_width="170dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        tools:layout_editor_absoluteX="192dp" />
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center|bottom"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:text="@string/button_goals"
+        android:gravity="center_horizontal|center"
+        android:onClick="goals"
+        tools:layout_editor_absoluteY="369dp"
+        tools:layout_editor_absoluteX="10dp" />
 
-            <Button
-                android:id="@+id/healthInfoButton"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:text="@string/button_healthInfo"
-                android:gravity="center_horizontal|center"
-                android:onClick="enterHealthInfo" />
+    <Button
+        android:id="@+id/button"
+        android:layout_height="50dp"
+        android:text="@string/button_healthInfo"
+        android:gravity="center_horizontal|center"
+        android:onClick="enterHealthInfo (MainActivity)"
+        android:layout_width="170dp"
+        app:layout_constraintRight_toRightOf="@+id/button3"
+        tools:layout_editor_absoluteY="430dp" />
 
-            <Button
-                android:id="@+id/goalsButton"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:text="@string/button_goals"
-                android:gravity="center_horizontal|center"
-                android:onClick="goals" />
-
-            <Button
-                android:id="@+id/progressButton"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:text="@string/button_progress"
-                android:gravity="center_horizontal|center"
-                android:onClick="progress"/>
-
-            <Button
-                android:id="@+id/comparisonButton"
-                android:layout_width="145dp"
-                android:layout_height="wrap_content"
-                android:text="@string/button_comparison"
-                android:gravity="center_horizontal|center"
-                android:onClick="comparison"/>
-        </LinearLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

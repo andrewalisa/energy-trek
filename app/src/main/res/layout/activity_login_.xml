@@ -28,7 +28,7 @@
         android:id="@+id/buttonLogin"
         android:layout_below="@+id/txtPassword"
         android:layout_centerHorizontal="true"
-        android:onClick="authenticateLogin" />
+        android:onClick="authenticateLogin (loginActivity)" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,5 +40,18 @@
         android:layout_below="@+id/txtUsername"
         android:layout_alignLeft="@+id/txtUsername"
         android:layout_alignStart="@+id/txtUsername" />
+
+    <TextView
+        android:text="Hello. \n Please log in to access your account."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

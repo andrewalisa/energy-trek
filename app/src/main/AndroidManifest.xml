@@ -6,10 +6,14 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:background="@drawable/space">
+
         <activity
-            android:name=".loginActivity"
-            android:label="@string/app_name">
+
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:background="@drawable/space">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +24,14 @@
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+
+     taken out due to new thing trying
+     <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+
+     add back in once database is done.
         -->
         <meta-data
             android:name="com.google.android.gms.version"
@@ -27,28 +39,25 @@
 
         <activity
             android:name=".HealthInfoActivity"
-            android:label="@string/healthInfoActivityTitle">
+            android:label="Add Data Point">
         </activity>
 
         <activity
             android:name=".GoalsActivity"
-            android:label="@string/button_goals">
+            android:label="Daily Progress">
         </activity>
 
         <activity
             android:name=".ProgressActivity"
-            android:label="@string/button_progress">
+            android:label="Recommended Goals">
         </activity>
 
         <activity
             android:name=".ComparisonActivity"
-            android:label="@string/button_comparison">
+            android:label="Friendly Comparison">
         </activity>
-        
-        <activity android:name=".MainActivity"
-            android:label="@string/app_name">
 
-        </activity>
+
     </application>
 
 </manifest>
