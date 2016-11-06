@@ -7,7 +7,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
+import static android.R.attr.checked;
+import static android.R.attr.checkedButton;
+import static android.R.attr.id;
+
 public class GoalsActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +22,7 @@ public class GoalsActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonClicked(View view) {
+
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -29,6 +36,7 @@ public class GoalsActivity extends AppCompatActivity {
                 if (checked)
                     label1.setHint("Cups of water per day");
                     label2.setHint("Time between cups (in hours?)");
+                    label3.setHint("Time since last cup of water (in hours)");
                     break;
             case R.id.radio_calories:
                 if (checked)
@@ -38,9 +46,9 @@ public class GoalsActivity extends AppCompatActivity {
                     break;
             case R.id.radio_sleep:
                 if (checked)
-                    label1.setHint("Amount of time asleep (in hours)");
-                    label2.setHint("Time to be asleep each night?");
-                    label3.setHint("Time spent in naps");
+                    label1.setHint("Time asleep (in hours)");
+                    label2.setHint("Time to be asleep each night");
+                    label3.setHint("Time spent in naps (in hours)");
 
                     break;
         }

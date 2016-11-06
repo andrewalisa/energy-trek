@@ -23,7 +23,8 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
             android:text="@string/radio_calories"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="onRadioButtonClicked"
+            android:checked="true" />
         <RadioButton android:id="@+id/radio_sleep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +47,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:inputType="phone"
-            android:hint="@string/edit_calories"/>
+            android:hint="Calories consumed per day"/>
 
         <EditText
             android:id="@+id/time"
@@ -54,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:inputType="phone"
-            android:hint="@string/edit_time" />
+            android:hint="Meals/snacks per day" />
 
         <EditText
             android:layout_width="match_parent"
@@ -62,7 +63,10 @@
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/property3"
-            android:layout_weight="0.09" />
+            android:layout_weight="0.09"
+            android:hint="Time since last meal (in hours)"
+            android:textIsSelectable="false"
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/enterButton"

@@ -36,7 +36,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:text="@string/radio_calories"
-                android:onClick="onRadioButtonClicked"/>
+                android:onClick="onRadioButtonClicked"
+                android:checked="true" />
             <RadioButton android:id="@+id/radio_sleep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -60,15 +61,15 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:inputType="phone"
-            android:hint="@string/edit_calories"/>
+            android:hint="Calories consumed per day"/>
 
         <EditText
             android:id="@+id/time"
-            android:layout_width="250dp"
+            android:layout_width="274dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:inputType="phone"
-            android:hint="@string/edit_time" />
+            android:hint="Time since last meal (in hours)" />
 
         <Button
             android:id="@+id/enterButton"
