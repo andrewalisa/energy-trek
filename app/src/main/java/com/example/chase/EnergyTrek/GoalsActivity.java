@@ -32,12 +32,9 @@ import java.util.Calendar;
 public class GoalsActivity extends AppCompatActivity {
 
     //Added by Andrew
-    String categoryStr;
-    private static final String LOG_TAG = GoalsActivity.class.getSimpleName();
-    private static final String FILE_NAME = "trekoutput.txt";
 
-    // Used to write to the textfile
-    public OutputStream output;
+    //Category String to determine what category the item is
+    String categoryStr;
 
     // Used to write to the textfile.
 
@@ -49,17 +46,10 @@ public class GoalsActivity extends AppCompatActivity {
     String q3;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.example.chase.EnergyTrek.R.layout.activity_today);
-
-        //Button enter = (Button)findViewById(R.id.enterButton);
-
-        //enter.setOnClickListener(enterListener);
-
-
 
     }
 
@@ -71,10 +61,6 @@ public class GoalsActivity extends AppCompatActivity {
         EditText label1 = (EditText) findViewById(R.id.calories);
         EditText label2 = (EditText) findViewById(R.id.time);
         EditText label3 = (EditText) findViewById(R.id.property3);
-
-        q1 = label1.getText().toString();
-        q2 = label2.getText().toString();
-        q3 = label3.getText().toString();
 
         label1.setText("");
         label2.setText("");
@@ -121,55 +107,6 @@ public class GoalsActivity extends AppCompatActivity {
     }
 
 
-   /* public void onClick (View view) {
-        EditText label1 = (EditText) findViewById(R.id.calories);
-        EditText label2 = (EditText) findViewById(R.id.time);
-        EditText label3 = (EditText) findViewById(R.id.property3);
-
-        q1 = label1.getText().toString();
-        q2 = label2.getText().toString();
-        q3 = label3.getText().toString();
-    } */
-
-/*
-  public OnClickListener enterListener = new OnClickListener()
-    {
-
-        @Override
-        public void onClick(View view)
-        {
-            EditText label1 = (EditText) findViewById(R.id.calories);
-            EditText label2 = (EditText) findViewById(R.id.time);
-            EditText label3 = (EditText) findViewById(R.id.property3);
-
-            q1 = label1.getText().toString();
-            q2 = label2.getText().toString();
-            q3 = label3.getText().toString();
-
-
-        }
-
-        public String return1() {
-            return q1;
-        }
-    }; */
-
-   /* public String returnq1(){
-        return q1;
-    } */
-
- /*   public String returnValues() {
-        EditText label1 = (EditText) findViewById(R.id.calories);
-        EditText label2 = (EditText) findViewById(R.id.time);
-        EditText label3 = (EditText) findViewById(R.id.property3);
-
-        q1 = label1.getText().toString();
-        q2 = label2.getText().toString();
-        q3 = label3.getText().toString();
-
-        return q1;
-    } */
-
     /** Called when the user clicks the Menu button */
     public void menu(View view) {
         Intent mainIntent = new Intent(this, MainActivity.class);
@@ -181,13 +118,9 @@ public class GoalsActivity extends AppCompatActivity {
 
     public void enter(View view) {
 
-   /*     EditText label1 = (EditText) findViewById(R.id.calories);
+        EditText label1 = (EditText) findViewById(R.id.calories);
         EditText label2 = (EditText) findViewById(R.id.time);
         EditText label3 = (EditText) findViewById(R.id.property3);
-
-        q1 = label1.getText().toString();
-        q2 = label2.getText().toString();
-        q3 = label3.getText().toString(); */
 
         //Set the Date
         Date date = Calendar.getInstance().getTime();
@@ -206,13 +139,17 @@ public class GoalsActivity extends AppCompatActivity {
             categoryStr = "C";
         }
 
+        //Putting the text from the labels into the string
+        q1 = label1.getText().toString();
+        q2 = label2.getText().toString();
+        q3 = label3.getText().toString();
+
 
 
         BufferedWriter bufferWriter = null;
         try {
             FileOutputStream fileOutputStream = openFileOutput("enerytrekdata.txt", Context.MODE_APPEND);
             bufferWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
-            //bufferWriter.write(categoryStr + ";");
             bufferWriter.write(categoryStr + ";" + strDate + ";" + strTime + ";" + q1 + ";" + q2 + ";" + q3);
             bufferWriter.append("\n");
 
