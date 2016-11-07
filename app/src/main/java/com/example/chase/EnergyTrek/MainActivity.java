@@ -12,7 +12,7 @@ import java.util.*;
 public class MainActivity extends AppCompatActivity {
     //Added by Andrew
 
-     // Used to read from the asset file containing the list of tasks.
+     // Used to read from the file.
 
     public InputStream input;
 
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             reader.close();
 
             input.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
