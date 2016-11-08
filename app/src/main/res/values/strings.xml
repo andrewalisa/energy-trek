@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Main Menu</string>
+    <string name="app_name">EnergyTrek</string>
     <string name="healthInfoActivityTitle">Enter Health Information</string>
     <string name="radio_water">Water</string>
     <string name="radio_calories">Calories</string>
