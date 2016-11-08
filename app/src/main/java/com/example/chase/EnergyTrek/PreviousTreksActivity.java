@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class PreviousTreksActivity extends AppCompatActivity {
 
@@ -21,50 +22,41 @@ public class PreviousTreksActivity extends AppCompatActivity {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
-        EditText label1 = (EditText) findViewById(R.id.olderField1);
-        EditText label2 = (EditText) findViewById(R.id.olderField2);
-        EditText label3 = (EditText) findViewById(R.id.olderField3);
-        EditText label4 = (EditText) findViewById(R.id.olderField4);
-        EditText label5 = (EditText) findViewById(R.id.currentField1);
-        EditText label6 = (EditText) findViewById(R.id.currentField2);
-        EditText label7 = (EditText) findViewById(R.id.currentField3);
-        EditText label8 = (EditText) findViewById(R.id.currentField4);
 
+        TextView labelA = (TextView) findViewById(R.id.DataA);
+        TextView labelA1 = (TextView) findViewById(R.id.txtDataA1);
+        TextView labelA2 = (TextView) findViewById(R.id.txtDataA2);
+        TextView labelA3 = (TextView) findViewById(R.id.txtDataA3);
+        TextView labelA4 = (TextView) findViewById(R.id.txtDataA4);
+        TextView labelA5 = (TextView) findViewById(R.id.txtDataA5);
+
+        TextView labelB = (TextView) findViewById(R.id.txtDataB);
+        TextView labelB1 = (TextView) findViewById(R.id.txtDataB1);
+        TextView labelB2 = (TextView) findViewById(R.id.txtDataB2);
+        TextView labelB3 = (TextView) findViewById(R.id.txtDataB3);
+        TextView labelB4 = (TextView) findViewById(R.id.txtDataB4);
+        TextView labelB5 = (TextView) findViewById(R.id.txtDataB5);
+
+        TextView labelC = (TextView) findViewById(R.id.txtDataC);
+        TextView labelC1 = (TextView) findViewById(R.id.txtDataC1);
+        TextView labelC2 = (TextView) findViewById(R.id.txtDataC2);
+        TextView labelC3 = (TextView) findViewById(R.id.txtDataC3);
+        TextView labelC4 = (TextView) findViewById(R.id.txtDataC4);
+        TextView labelC5 = (TextView) findViewById(R.id.txtDataC5);
 
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.radio_water:
                 if (checked)
-                    label1.setHint("Cups of water per day");
-                    label2.setHint("Time between cups (in hours?)");
-                    label3.setHint("Amount of caffeine had");
-                    label5.setHint("Cups of water per day");
-                    label6.setHint("Time between cups (in hours?)");
-                    label7.setHint("Amount of caffeine had");
-                label4.setHint("");
-                label8.setHint("");
+
                 break;
             case R.id.radio_calories:
                 if (checked)
-                    label1.setHint("Amount of calories per day");
-                    label2.setHint("Meals per day");
-                    label3.setHint("Time between meals");
-                    label5.setHint("Amount of calories per day");
-                    label6.setHint("Meals per day");
-                    label7.setHint("Time between meals");
-                label4.setHint("");
-                label8.setHint("");
+
                 break;
             case R.id.radio_sleep:
                 if (checked)
-                    label1.setHint("Amount of time asleep");
-                    label2.setHint("Time to bed");
-                    label3.setHint("Naps per day");
-                    label5.setHint("Amount of calories per day");
-                    label6.setHint("Meals per day");
-                    label7.setHint("Time between meals");
-                label4.setHint("");
-                label8.setHint("");
+
                 break;
         }
     }
