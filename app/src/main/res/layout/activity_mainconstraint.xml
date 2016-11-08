@@ -49,8 +49,9 @@
         android:onClick="previousTreks (MainActivity)" />
 
     <Button
+        android:text="Your Trek Profile"
         android:layout_height="wrap_content"
-        android:id="@+id/button7"
+        android:id="@+id/btnProfile"
         android:layout_width="160dp"
         android:textColor="@android:color/white"
         android:background="@android:color/black"
@@ -58,5 +59,6 @@
         android:layout_alignBottom="@+id/btnPT"
         android:layout_alignRight="@+id/btnToday"
         android:layout_alignEnd="@+id/btnToday"
-        android:text="Your Trek Profile" />
+
+        android:onClick="profile (MainActivity)" />
 </android.widget.RelativeLayout>

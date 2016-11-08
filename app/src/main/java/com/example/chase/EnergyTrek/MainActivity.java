@@ -52,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button profile = (Button) findViewById(R.id.btnProfile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profileIntent = new Intent(MainActivity.this, UserProfileActivity.class);
+                startActivity(profileIntent);
+            }
+        });
+
         try {
             // Opens the asset file.
             input = this.getAssets().open("trekinfo.txt");

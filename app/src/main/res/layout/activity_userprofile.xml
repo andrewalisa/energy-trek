@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        android:gravity="center"
+        android:layout_gravity="start"
+        android:onClick="menu (UserProfileActivity)"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/textView2"
+        android:text="Hello! We're working on a way to better serve you. Check back later for User Profile functionality."
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
