@@ -46,27 +46,27 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:inputType="phone"
-            android:hint="Calories consumed per day"/>
+            android:hint="Calories consumed per day"
+            android:inputType="time" />
 
         <EditText
             android:id="@+id/time"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:inputType="phone"
+            android:inputType="time"
             android:hint="Meals/snacks per day" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/property3"
             android:layout_weight="0.09"
             android:hint="Time since last meal (in hours)"
             android:textIsSelectable="false"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:inputType="time" />
 
         <Button
             android:id="@+id/enterButton"
