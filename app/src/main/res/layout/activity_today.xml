@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_height="match_parent">
 
     <TextView
         android:text="Please Choose One:"
@@ -49,38 +49,32 @@
         android:orientation="vertical"
         android:weightSum="1">
 
+        <DatePicker
+            android:layout_height="199dp"
+            android:id="@+id/datePicker2"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="20dp"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"
+            android:scrollbarStyle="insideOverlay"
+            android:startYear="2016"
+            android:datePickerMode="spinner"
+            android:layout_marginRight="20dp"
+            android:layout_width="280dp" />
+
+
         <EditText
             android:id="@+id/calories"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:hint="Calories consumed per day"
             android:inputType="time" />
 
-        <EditText
-            android:id="@+id/time"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:inputType="time"
-            android:hint="Meals/snacks per day" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/property3"
-            android:layout_weight="0.09"
-            android:hint="Time since last meal (in hours)"
-            android:textIsSelectable="false"
-            android:textAlignment="center"
-            android:inputType="time" />
-
         <Button
             android:id="@+id/enterButton"
             android:layout_width="195dp"
-            android:layout_height="wrap_content"
             android:text="@string/button_enter"
             android:gravity="center"
             android:layout_gravity="start"
@@ -88,7 +82,8 @@
             android:layout_marginTop="50dp"
             android:onClick="enter"
             android:background="@android:color/black"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
 
 
         <Button

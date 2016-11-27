@@ -1,221 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <TextView
-        android:text="Please Choose One:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:layout_marginRight="20dp"
-        android:gravity="center"/>
-
-    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <RadioButton android:id="@+id/radio_water"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="@string/radio_water"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/radio_calories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="@string/radio_calories"
-            android:onClick="onRadioButtonClicked"
-            android:checked="true" />
-        <RadioButton android:id="@+id/radio_sleep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_sleep"
-            android:onClick="onRadioButtonClicked"/>
-    </RadioGroup>
-
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:weightSum="2"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Please Choose One:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_marginRight="20dp"
+            android:gravity="center"/>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/radio_water"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/radio_calories"
+                android:onClick="onRadioButtonClicked"
+                android:checked="false" />
+            <RadioButton android:id="@+id/radio_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_sleep"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:layout_marginRight="20dp"
-            android:orientation="vertical">
+            android:layout_marginTop="50dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/DataA"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="left"
-                android:text="Calories Consumed Per Day"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtDataA1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:textSize="20sp"
-                android:hint="1:"/>
+                <TextView
+                    android:id="@+id/DataA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="Please choose an option from above"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:gravity="center_horizontal" />
 
-            <TextView
-                android:id="@+id/txtDataA2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="2:" />
+                <TextView
+                    android:id="@+id/txtDataA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20sp"
+                    android:hint="1:"/>
 
-            <TextView
-                android:id="@+id/txtDataA3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="3:"/>
+                <TextView
+                    android:id="@+id/txtDataA2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="2:" />
 
-            <TextView
-                android:id="@+id/txtDataA4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="4:"/>
+                <TextView
+                    android:id="@+id/txtDataA3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="3:"/>
 
-            <TextView
-                android:id="@+id/txtDataA5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="5:"/>
+                <TextView
+                    android:id="@+id/txtDataA4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="4:"/>
+
+                <TextView
+                    android:id="@+id/txtDataA5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="5:"/>
 
 
-            <TextView
-                android:id="@+id/txtDataB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="left"
-                android:text="Meals/Snacks Per Day"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtDataB"
+                    android:layout_width="296dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Meals/Snacks Per Day"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
 
-            <TextView
-                android:id="@+id/txtDataB1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:textSize="20sp"
-                android:hint="1:"/>
+                <TextView
+                    android:id="@+id/txtDataB1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20sp"
+                    android:hint="1:"/>
 
-            <TextView
-                android:id="@+id/txtDataB2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="2:" />
+                <TextView
+                    android:id="@+id/txtDataB2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="2:" />
 
-            <TextView
-                android:id="@+id/txtDataB3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="3:"/>
+                <TextView
+                    android:id="@+id/txtDataB3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="3:"/>
 
-            <TextView
-                android:id="@+id/txtDataB4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="4:"/>
-            <TextView
-                android:id="@+id/txtDataB5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="5:"/>
+                <TextView
+                    android:id="@+id/txtDataB4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="4:"/>
+                <TextView
+                    android:id="@+id/txtDataB5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="5:"/>
 
-            <TextView
-                android:id="@+id/txtDataC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:gravity="left"
-                android:text="Time Since Last Meal"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtDataC"
+                    android:layout_width="287dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Time Since Last Meal"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
 
-            <TextView
-                android:id="@+id/txtDataC1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:textSize="20sp"
-                android:hint="1:"/>
+                <TextView
+                    android:id="@+id/txtDataC1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20sp"
+                    android:hint="1:"/>
 
-            <TextView
-                android:id="@+id/txtDataC2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="2:" />
+                <TextView
+                    android:id="@+id/txtDataC2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="2:" />
 
-            <TextView
-                android:id="@+id/txtDataC3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="3:"/>
+                <TextView
+                    android:id="@+id/txtDataC3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="3:"/>
 
-            <TextView
-                android:id="@+id/txtDataC4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="4:"/>
-            <TextView
-                android:id="@+id/txtDataC5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:textSize="20sp"
-                android:hint="5:"/>
+                <TextView
+                    android:id="@+id/txtDataC4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="4:"/>
+                <TextView
+                    android:id="@+id/txtDataC5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="20sp"
+                    android:hint="5:"/>
 
 
             </LinearLayout>
@@ -223,16 +226,16 @@
 
         </LinearLayout>
 
-    <Button
-        android:id="@+id/menuButton"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:layout_gravity="start"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="50dp"
-        android:onClick="menu"
-        android:background="@android:color/black"
-        android:textColor="@android:color/white" />
-</LinearLayout>
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:text="Main Menu"
+            android:layout_gravity="start"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"
+            android:onClick="menu"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 </ScrollView>

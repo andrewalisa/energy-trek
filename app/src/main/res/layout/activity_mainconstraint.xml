@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnPT"
         android:layout_width="160dp"
-        android:layout_marginLeft="17dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginStart="17dp"
         android:textColor="@android:color/white"
         android:background="@android:color/black"
