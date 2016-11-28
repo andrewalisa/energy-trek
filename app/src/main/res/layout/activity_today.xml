@@ -54,13 +54,15 @@
             android:id="@+id/datePicker2"
             android:layout_marginLeft="55dp"
             android:layout_marginTop="20dp"
-            android:calendarViewShown="false"
-            android:spinnersShown="true"
             android:scrollbarStyle="insideOverlay"
-            android:startYear="2016"
+            android:startYear="2015"
             android:datePickerMode="spinner"
             android:layout_marginRight="20dp"
-            android:layout_width="280dp" />
+            android:layout_width="280dp"
+            android:endYear="2016"
+            android:spinnersShown="true"
+            android:elevation="1dp"
+            android:calendarViewShown="false" />
 
 
         <EditText

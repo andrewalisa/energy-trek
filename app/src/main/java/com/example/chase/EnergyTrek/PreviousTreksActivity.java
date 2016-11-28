@@ -1,6 +1,8 @@
 package com.example.chase.EnergyTrek;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,27 +19,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class PreviousTreksActivity extends AppCompatActivity {
-/*
-    TextView labelA = (TextView) findViewById(R.id.DataA);
-    TextView labelA1 = (TextView) findViewById(R.id.txtDataA1);
-    TextView labelA2 = (TextView) findViewById(R.id.txtDataA2);
-    TextView labelA3 = (TextView) findViewById(R.id.txtDataA3);
-    TextView labelA4 = (TextView) findViewById(R.id.txtDataA4);
-    TextView labelA5 = (TextView) findViewById(R.id.txtDataA5);
-
-    TextView labelB = (TextView) findViewById(R.id.txtDataB);
-    TextView labelB1 = (TextView) findViewById(R.id.txtDataB1);
-    TextView labelB2 = (TextView) findViewById(R.id.txtDataB2);
-    TextView labelB3 = (TextView) findViewById(R.id.txtDataB3);
-    TextView labelB4 = (TextView) findViewById(R.id.txtDataB4);
-    TextView labelB5 = (TextView) findViewById(R.id.txtDataB5);
-
-    TextView labelC = (TextView) findViewById(R.id.txtDataC);
-    TextView labelC1 = (TextView) findViewById(R.id.txtDataC1);
-    TextView labelC2 = (TextView) findViewById(R.id.txtDataC2);
-    TextView labelC3 = (TextView) findViewById(R.id.txtDataC3);
-    TextView labelC4 = (TextView) findViewById(R.id.txtDataC4);
-    TextView labelC5 = (TextView) findViewById(R.id.txtDataC5); */
 
     //Added by Andrew
 
@@ -46,6 +27,10 @@ public class PreviousTreksActivity extends AppCompatActivity {
     String[] wActivity;
 
     String tempStr;
+
+
+
+    int i;
 
 
     // Used to read from the file.
@@ -84,7 +69,14 @@ public class PreviousTreksActivity extends AppCompatActivity {
         TextView labelA4 = (TextView) findViewById(R.id.txtDataA4);
         TextView labelA5 = (TextView) findViewById(R.id.txtDataA5);
 
-        TextView labelB = (TextView) findViewById(R.id.txtDataB);
+        TextView delBtn1 = (TextView) findViewById(R.id.dltButton1);
+        TextView delBtn2 = (TextView) findViewById(R.id.dltButton2);
+        TextView delBtn3 = (TextView) findViewById(R.id.dltButton3);
+        TextView delBtn4 = (TextView) findViewById(R.id.dltButton4);
+        TextView delBtn5 = (TextView) findViewById(R.id.dltButton5);
+
+
+  /*      TextView labelB = (TextView) findViewById(R.id.txtDataB);
         TextView labelB1 = (TextView) findViewById(R.id.txtDataB1);
         TextView labelB2 = (TextView) findViewById(R.id.txtDataB2);
         TextView labelB3 = (TextView) findViewById(R.id.txtDataB3);
@@ -96,7 +88,7 @@ public class PreviousTreksActivity extends AppCompatActivity {
         TextView labelC2 = (TextView) findViewById(R.id.txtDataC2);
         TextView labelC3 = (TextView) findViewById(R.id.txtDataC3);
         TextView labelC4 = (TextView) findViewById(R.id.txtDataC4);
-        TextView labelC5 = (TextView) findViewById(R.id.txtDataC5);
+        TextView labelC5 = (TextView) findViewById(R.id.txtDataC5); */
 
         //labelA.setText("Please choose an option \nabove to see previous activity.");
 
@@ -106,6 +98,13 @@ public class PreviousTreksActivity extends AppCompatActivity {
         labelA4.setVisibility(View.INVISIBLE);
         labelA5.setVisibility(View.INVISIBLE);
 
+        delBtn1.setVisibility(View.INVISIBLE);
+        delBtn2.setVisibility(View.INVISIBLE);
+        delBtn3.setVisibility(View.INVISIBLE);
+        delBtn4.setVisibility(View.INVISIBLE);
+        delBtn5.setVisibility(View.INVISIBLE);
+
+/*
         labelB.setVisibility(View.INVISIBLE);
         labelB1.setVisibility(View.INVISIBLE);
         labelB2.setVisibility(View.INVISIBLE);
@@ -118,7 +117,7 @@ public class PreviousTreksActivity extends AppCompatActivity {
         labelC2.setVisibility(View.INVISIBLE);
         labelC3.setVisibility(View.INVISIBLE);
         labelC4.setVisibility(View.INVISIBLE);
-        labelC5.setVisibility(View.INVISIBLE);
+        labelC5.setVisibility(View.INVISIBLE); */
 
 
 
@@ -136,8 +135,8 @@ public class PreviousTreksActivity extends AppCompatActivity {
 
                 trekArray = line.split(";");
 
-
                 tempStr = null;
+
 
                 //If the category is Calories it will run this.
                 if (trekArray[0].equals("C")) {
@@ -248,6 +247,12 @@ public class PreviousTreksActivity extends AppCompatActivity {
         TextView labelA4 = (TextView) findViewById(R.id.txtDataA4);
         TextView labelA5 = (TextView) findViewById(R.id.txtDataA5);
 
+        TextView delBtn1 = (TextView) findViewById(R.id.dltButton1);
+        TextView delBtn2 = (TextView) findViewById(R.id.dltButton2);
+        TextView delBtn3 = (TextView) findViewById(R.id.dltButton3);
+        TextView delBtn4 = (TextView) findViewById(R.id.dltButton4);
+        TextView delBtn5 = (TextView) findViewById(R.id.dltButton5);
+/*
         TextView labelB = (TextView) findViewById(R.id.txtDataB);
         TextView labelB1 = (TextView) findViewById(R.id.txtDataB1);
         TextView labelB2 = (TextView) findViewById(R.id.txtDataB2);
@@ -260,7 +265,7 @@ public class PreviousTreksActivity extends AppCompatActivity {
         TextView labelC2 = (TextView) findViewById(R.id.txtDataC2);
         TextView labelC3 = (TextView) findViewById(R.id.txtDataC3);
         TextView labelC4 = (TextView) findViewById(R.id.txtDataC4);
-        TextView labelC5 = (TextView) findViewById(R.id.txtDataC5);
+        TextView labelC5 = (TextView) findViewById(R.id.txtDataC5); */
 
         labelA1.setVisibility(View.VISIBLE);
         labelA2.setVisibility(View.VISIBLE);
@@ -268,7 +273,9 @@ public class PreviousTreksActivity extends AppCompatActivity {
         labelA4.setVisibility(View.VISIBLE);
         labelA5.setVisibility(View.VISIBLE);
 
-        labelB.setVisibility(View.VISIBLE);
+
+
+ /*       labelB.setVisibility(View.VISIBLE);
         labelB1.setVisibility(View.VISIBLE);
         labelB2.setVisibility(View.VISIBLE);
         labelB3.setVisibility(View.VISIBLE);
@@ -280,22 +287,56 @@ public class PreviousTreksActivity extends AppCompatActivity {
         labelC2.setVisibility(View.VISIBLE);
         labelC3.setVisibility(View.VISIBLE);
         labelC4.setVisibility(View.VISIBLE);
-        labelC5.setVisibility(View.VISIBLE);
+        labelC5.setVisibility(View.VISIBLE); */
 
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.radio_water:
                 if (checked)
-                    labelA1.setText(wActivity[0]);
+                    labelA.setText("Cups of water per day:");
+
+                labelA1.setText(wActivity[0]);
                 labelA2.setText(wActivity[1]);
                 labelA3.setText(wActivity[2]);
                 labelA4.setText(wActivity[3]);
                 labelA5.setText(wActivity[4]);
 
+                if (labelA1.getText() == "") {
+                    delBtn1.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn1.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA2.getText() == "") {
+                    delBtn2.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn2.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA3.getText() == "") {
+                    delBtn3.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn3.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA4.getText() == "") {
+                    delBtn4.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn4.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA5.getText() == "") {
+                    delBtn5.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn5.setVisibility(View.VISIBLE);
+                }
+
+
+
                 break;
             case R.id.radio_calories:
                 if (checked)
-                    labelA.setText("Calories Consumed Per Day");
+                    labelA.setText("Calories consumed per day:");
 
                 labelA1.setText(cActivity[0]);
                 labelA2.setText(cActivity[1]);
@@ -303,17 +344,97 @@ public class PreviousTreksActivity extends AppCompatActivity {
                 labelA4.setText(cActivity[3]);
                 labelA5.setText(cActivity[4]);
 
+                if (labelA1.getText() == "") {
+                    delBtn1.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn1.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA2.getText() == "") {
+                    delBtn2.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn2.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA3.getText() == "") {
+                    delBtn3.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn3.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA4.getText() == "") {
+                    delBtn4.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn4.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA5.getText() == "") {
+                    delBtn5.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn5.setVisibility(View.VISIBLE);
+                }
+
                 break;
             case R.id.radio_sleep:
                 if (checked)
-                    labelA1.setText(sActivity[0]);
+                    labelA.setText("Time asleep (in hours):");
+
+                labelA1.setText(sActivity[0]);
                 labelA2.setText(sActivity[1]);
                 labelA3.setText(sActivity[2]);
                 labelA4.setText(sActivity[3]);
                 labelA5.setText(sActivity[4]);
+
+                if (labelA1.getText() == "") {
+                    delBtn1.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn1.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA2.getText() == "") {
+                    delBtn2.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn2.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA3.getText() == "") {
+                    delBtn3.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn3.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA4.getText() == "") {
+                    delBtn4.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn4.setVisibility(View.VISIBLE);
+                }
+
+                if (labelA5.getText() == "") {
+                    delBtn5.setVisibility(View.INVISIBLE);
+                } else {
+                    delBtn5.setVisibility(View.VISIBLE);
+                }
+
+
+
                 break;
         }
+
+
+
     }
+
+    /*public void delete(View view) {
+        //Intent progressIntent = new Intent(this, PreviousTreksActivity.class);
+        //startActivity(progressIntent);
+        //Let the user know it's been stored and reset the entry box
+        AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
+        dlgAlert.setMessage("Data stored!");
+        dlgAlert.setTitle("Success!");
+        dlgAlert.setPositiveButton("OK", null);
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
+    } */
 
     /** Called when the user clicks the Menu button */
     public void menu(View view) {
@@ -322,8 +443,42 @@ public class PreviousTreksActivity extends AppCompatActivity {
     }
 
     /** Called when the user clicks the Enter button */
-    public void enter(View view) {
-        Intent progressIntent = new Intent(this, PreviousTreksActivity.class);
-        startActivity(progressIntent);
+    public void delete(View view) {
+        //Intent progressIntent = new Intent(this, PreviousTreksActivity.class);
+        //startActivity(progressIntent);
+
+        AlertDialog diaBox = AskOption();
+        diaBox.show();
+
+    }
+
+    private AlertDialog AskOption()
+    {
+        AlertDialog myQuittingDialogBox =new AlertDialog.Builder(this)
+                //set message, title, and icon
+                .setTitle("Delete")
+                .setMessage("Do you want to Delete")
+
+                .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        //your deleting code
+                        dialog.dismiss();
+                    }
+
+                })
+
+
+
+                .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+                })
+                .create();
+        return myQuittingDialogBox;
+
     }
 }

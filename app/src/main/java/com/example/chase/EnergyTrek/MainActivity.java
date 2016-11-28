@@ -60,31 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(profileIntent);
             }
         });
-
-        try {
-            // Opens the asset file.
-            input = this.getAssets().open("trekinfo.txt");
-            // Prepares the reader object.
-            reader = new BufferedReader(new InputStreamReader(input));
-
-            // This string stores the read line. Will be used in the following while loop in the same manner.
-            // Used here to assign it to a value other than null, so that the while loop can run.
-
-            line = reader.readLine();
-
-            // Adds the first read line to the trekinfo  arrayList, which is then added with the arrayList adapter to the listView.
-
-            //trekinfo.add(line);
-
-            String[] trekinfo = line.split(";");
-
-            reader.close();
-
-            input.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     /** Called when the user clicks the Enter Health Info. button */

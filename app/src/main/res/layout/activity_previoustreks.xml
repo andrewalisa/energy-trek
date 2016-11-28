@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -62,7 +63,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:layout_marginRight="20dp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:weightSum="1">
 
                 <TextView
                     android:id="@+id/DataA"
@@ -78,147 +80,107 @@
 
                 <TextView
                     android:id="@+id/txtDataA1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="15dp"
                     android:textSize="20sp"
-                    android:hint="1:"/>
+                    android:layout_weight="1"
+                    android:hint=""/>
+
+
+                <Button android:text="Delete"
+                    android:id="@+id/dltButton1"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="delete">
+
+                </Button>
 
                 <TextView
                     android:id="@+id/txtDataA2"
-                    android:layout_width="wrap_content"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="20sp"
-                    android:hint="2:" />
+                    android:layout_weight="1"
+                    android:hint=""/>
+
+                <Button android:text="Delete"
+                    android:id="@+id/dltButton2"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="delete">
+                </Button>
 
                 <TextView
                     android:id="@+id/txtDataA3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="20sp"
-                    android:hint="3:"/>
+                    android:layout_weight="1"
+                    android:hint=""/>
+
+                <Button android:text="Delete"
+                    android:id="@+id/dltButton3"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="delete">
+                </Button>
 
                 <TextView
                     android:id="@+id/txtDataA4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
                     android:textSize="20sp"
-                    android:hint="4:"/>
+                    android:layout_weight="1"
+                    android:hint=""/>
+
+                <Button android:text="Delete"
+                    android:id="@+id/dltButton4"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="delete">
+                </Button>
 
                 <TextView
                     android:id="@+id/txtDataA5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="5:"/>
-
-
-                <TextView
-                    android:id="@+id/txtDataB"
-                    android:layout_width="296dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="30dp"
-                    android:text="Meals/Snacks Per Day"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
-
-                <TextView
-                    android:id="@+id/txtDataB1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="15dp"
                     android:textSize="20sp"
-                    android:hint="1:"/>
+                    android:layout_weight="1"
+                    android:hint=""/>
 
-                <TextView
-                    android:id="@+id/txtDataB2"
-                    android:layout_width="wrap_content"
+                <Button android:text="Delete"
+                    android:id="@+id/dltButton5"
+                    android:textSize="18dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="2:" />
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="delete">
+                </Button>
 
-                <TextView
-                    android:id="@+id/txtDataB3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="3:"/>
 
-                <TextView
-                    android:id="@+id/txtDataB4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="4:"/>
-                <TextView
-                    android:id="@+id/txtDataB5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="5:"/>
-
-                <TextView
-                    android:id="@+id/txtDataC"
-                    android:layout_width="287dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="30dp"
-                    android:text="Time Since Last Meal"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:gravity="center" />
-
-                <TextView
-                    android:id="@+id/txtDataC1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:textSize="20sp"
-                    android:hint="1:"/>
-
-                <TextView
-                    android:id="@+id/txtDataC2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="2:" />
-
-                <TextView
-                    android:id="@+id/txtDataC3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="3:"/>
-
-                <TextView
-                    android:id="@+id/txtDataC4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="4:"/>
-                <TextView
-                    android:id="@+id/txtDataC5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:textSize="20sp"
-                    android:hint="5:"/>
 
 
             </LinearLayout>
@@ -226,13 +188,14 @@
 
         </LinearLayout>
 
+
         <Button
             android:id="@+id/menuButton"
             android:layout_width="267dp"
             android:layout_height="wrap_content"
             android:text="Main Menu"
             android:layout_gravity="start"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="100dp"
             android:layout_marginLeft="50dp"
             android:onClick="menu"
             android:background="@android:color/black"
