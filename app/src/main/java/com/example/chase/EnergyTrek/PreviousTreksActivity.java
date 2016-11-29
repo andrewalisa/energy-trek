@@ -457,7 +457,7 @@ public class PreviousTreksActivity extends AppCompatActivity {
         AlertDialog myQuittingDialogBox =new AlertDialog.Builder(this)
                 //set message, title, and icon
                 .setTitle("Delete")
-                .setMessage("Do you want to Delete")
+                .setMessage("Do you want to Delete this entry?")
 
                 .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
 
