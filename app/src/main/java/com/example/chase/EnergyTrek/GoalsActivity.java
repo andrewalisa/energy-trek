@@ -21,6 +21,7 @@ import android.content.Context;
 import static android.R.attr.category;
 import static android.R.attr.checked;
 import static android.R.attr.checkedButton;
+import static android.R.attr.data;
 import static android.R.attr.format;
 import static android.R.attr.id;
 import static com.example.chase.EnergyTrek.R.id.enterButton;
@@ -64,7 +65,7 @@ public class GoalsActivity extends AppCompatActivity {
         label1.setText("");
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.radio_water:
                 if (checked)
                     label1.setHint("Cups of water per day");
@@ -83,13 +84,17 @@ public class GoalsActivity extends AppCompatActivity {
         }
     }
 
-    /** Called when the user clicks the Menu button */
+    /**
+     * Called when the user clicks the Menu button
+     */
     public void menu(View view) {
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
     }
 
-    /** Called when the user clicks the Enter button */
+    /**
+     * Called when the user clicks the Enter button
+     */
 
 
     public void enter(View view) {
@@ -115,11 +120,11 @@ public class GoalsActivity extends AppCompatActivity {
             //Checking if "energytrekdata.txt" exists, if it does exist, it chkExist will be true, otherwise it will be false
             chkExist = f.exists();
 
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (chkExist == true) {
+        if (chkExist) {
             for (int Y = 0; Y < 125; Y++)
                 testDates[Y] = "";
 
@@ -208,10 +213,15 @@ public class GoalsActivity extends AppCompatActivity {
 
                         line = bufferReader.readLine();
 
-                        //Take at least 120 entries (guarentees a month) and put them in an array
+                        //Take at least 120 entries (guarantees a month) and put them in an array
                         while (line != null && counter < 125) {
+                            boolean check = true;
+                            check = checkUser(line);
+                            //if(!check)
                             testDates[counter] = line;
+                            //counter--;
                             counter++;
+                            System.out.println(line + "line");
                             line = bufferReader.readLine();
                         }
 
@@ -268,7 +278,7 @@ public class GoalsActivity extends AppCompatActivity {
                         temp = testDates[X];
                         inputLength = temp.length();
 
-                        //Further seperate each entry into a checkable piece
+                        //Further separate each entry into a checkable piece
                         for (int counter = 0; counter < inputLength; counter++) {
                             segCheck = temp.substring(counter, counter + 1);
                             if (segCheck.compareTo(";") == 0) {
@@ -310,7 +320,7 @@ public class GoalsActivity extends AppCompatActivity {
 
                             //Let the user know it's been stored and reset the entry box
                             AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
-                            dlgAlert.setMessage("Data stored!");
+                            dlgAlert.setMessage(recommend());
                             dlgAlert.setTitle("Success!");
                             dlgAlert.setPositiveButton("OK", null);
                             dlgAlert.setCancelable(true);
@@ -344,7 +354,7 @@ public class GoalsActivity extends AppCompatActivity {
                 dlgAlert.setPositiveButton("OK", null);
                 dlgAlert.setCancelable(true);
                 dlgAlert.create().show();
-            }else
+            } else
                 try {
                     //Store that sucker
                     BufferedReader bufferReader1 = null;
@@ -360,7 +370,7 @@ public class GoalsActivity extends AppCompatActivity {
 
                     //Let the user know it's been stored and reset the entry box
                     AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
-                    dlgAlert.setMessage("Data stored!");
+                    dlgAlert.setMessage(recommend());
                     dlgAlert.setTitle("Success!");
                     dlgAlert.setPositiveButton("OK", null);
                     dlgAlert.setCancelable(true);
@@ -375,116 +385,144 @@ public class GoalsActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+        }
+    }
 
+    public boolean checkUser(String line) {
+
+        boolean validEntry = true;
+        Integer inputLength;
+        String segCheck;
+
+        inputLength = line.length();
+
+        for (int counter = 0; counter < inputLength; counter++) {
+            segCheck = line.substring(counter, counter + 1);
+            if (segCheck.compareTo("U") == 0) {
+                validEntry = false;
+            }
         }
 
+        return validEntry;
+    }
 
+    public String recommend() {
+        // Used to get the individual lines from the asset file.
+        BufferedReader reader = null;
 
+        //The String where the parsed lines are stored.
+        String line;
 
+        boolean profile = false, male;
+        Integer checkLength, datatype = 0, age, weight, height, CPD, recCal = 0, recSleep = 0;
+        String segCheck, userInfo = "", message = "Please visit the User Profile page!";
 
-/************************************************************************************************
- try {
- // Opens the asset file.
- FileInputStream fileInputStream = openFileInput("energytrekdata.txt");
- // Prepares the reader object.
- bufferReader = new BufferedReader(new InputStreamReader(fileInputStream));
+        String temp[] = new String[5];
 
- line = bufferReader.readLine();
- q1 = label1.getText().toString();
+        try {
+            // Opens the asset file.
+            FileInputStream fileInputStream = openFileInput("energytrekdata.txt");
+            // Prepares the reader object.
+            reader = new BufferedReader(new InputStreamReader(fileInputStream));
 
- while (line != null ) {
- trekArray = line.split(";");
+            line = reader.readLine();
 
- if (trekArray[3].equals(year)) {
- if (trekArray[2].equals(month)) {
- if (trekArray[1].equals(date)) {
- AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
- dlgAlert.setMessage("Date already has entry");
- dlgAlert.setTitle("Error");
- dlgAlert.setPositiveButton("OK", null);
- dlgAlert.setCancelable(true);
- dlgAlert.create().show();
- } else {
- try {
- FileOutputStream fileOutputStream = openFileOutput("energytrekdata.txt", Context.MODE_APPEND);
- bufferWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
- bufferWriter.write(categoryStr + ";" + date + ";" + month + ";" + year + ";" + q1);
- bufferWriter.append("\n");
+            while (line != null) {
+                checkLength = line.length();
 
- } catch (FileNotFoundException e) {
- e.printStackTrace();
- } catch (IOException e) {
- e.printStackTrace();
- } finally {
- try {
- bufferWriter.close();
- } catch (IOException e) {
- e.printStackTrace();
- }
- }
+                for (int counter = 0; counter < checkLength; counter++) {
+                    segCheck = line.substring(counter, counter + 1);
+                    if (segCheck.compareTo("U") == 0) {
+                        userInfo.equals(line);
+                        System.out.println(userInfo + "&*&*");
+                    }
+                }
 
+                line = reader.readLine();
+            }
 
- }
+            if(userInfo.compareTo("") != 0){
+                checkLength = userInfo.length();
+                for (int counter = 0; counter < checkLength; counter++) {
+                    segCheck = line.substring(counter, counter + 1);
+                    if (segCheck.compareTo("-") == 0) {
+                        datatype = datatype + 1;
+                    } else {
+                        temp[datatype] = temp[datatype] + segCheck;
+                    }
+                }
 
- //Read the next line
- line = bufferReader.readLine();
- }
+                if(temp[1].compareTo("true") == 0)
+                    male = true;
+                else
+                    male = false;
 
- }
- }
- } catch (FileNotFoundException e) {
- e.printStackTrace();
- } catch (IOException e) {
- e.printStackTrace();
- }finally {
- try {
- bufferReader.close();
- } catch (IOException e) {
- e.printStackTrace();
- }
- }
+                age = Integer.parseInt(temp[2]);
+                height = Integer.parseInt(temp[3]);
+                weight = Integer.parseInt(temp[4]);
 
- //Set the Date
- Date dateToday = Calendar.getInstance().getTime();
- //Set the format
- SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
- //Put it in the string
- String strDate = formatter.format(dateToday);
- //Set the time format
- SimpleDateFormat formatTime = new SimpleDateFormat("hh:mm:ss");
- //Putting the time in the string
- String strTime = formatTime.format(dateToday);
+                CPD = weight / 20 * 8 + 8;
 
+                if(age >= 9 && age <= 13 && male){
+                    recCal = 1800;
+                } else if(age >= 14 && age <= 18 && male){
+                    recCal = 2200;
+                } else if(age >= 19 && age <= 30 && male){
+                    recCal = 2400;
+                } else if(age >= 31 && male){
+                    recCal = 2000;
+                } else if(age >= 9 && age <= 13 && !male){
+                    recCal = 1600;
+                } else if(age >= 14 && age <= 18 && !male){
+                    recCal = 1800;
+                } else if(age >= 19 && age <= 30 && !male){
+                    recCal = 2000;
+                } else if(age >= 31 && !male){
+                    recCal = 1800;
+                }
 
- //Default value is C because calories is the first screen they see.
- if (categoryStr == null) {
- categoryStr = "C";
- }
+                if(age >= 9 && age <= 13 && male){
+                    recSleep = 9;
+                } else if(age >= 14 && age <= 18 && male){
+                    recSleep = 8;
+                } else if(age >= 19 && age <= 30 && male){
+                    recSleep = 8;
+                } else if(age >= 31 && male){
+                    recSleep = 7;
+                } else if(age >= 9 && age <= 13 && !male){
+                    recSleep = 10;
+                } else if(age >= 14 && age <= 18 && !male){
+                    recSleep = 9;
+                } else if(age >= 19 && age <= 30 && !male){
+                    recSleep = 8;
+                } else if(age >= 31 && !male){
+                    recSleep = 7;
+                }
 
- //Putting the text from the labels into the string
- q1 = label1.getText().toString();
+                if(categoryStr.compareTo("W") == 0) {
+                    message = "The average cups of water consumed per day is " + CPD + " cups.";
+                } else if(categoryStr.compareTo("C") == 0) {
+                    message = "The average amount of calories consumed for people of this age is " + recCal + ".";
+                }else{
+                    message = "The average amount of hours slept for people of this age is " + recSleep + ".";
+                }
 
+            }
 
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
- BufferedWriter bufferWriter = null;
- try {
- FileOutputStream fileOutputStream = openFileOutput("energytrekdata.txt", Context.MODE_APPEND);
- bufferWriter = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
- bufferWriter.write(categoryStr + ";" + strDate + ";" + strTime + ";" + q1 + ";" + q2 + ";" + q3);
- bufferWriter.append("\n");
-
- } catch (FileNotFoundException e) {
- e.printStackTrace();
- } catch (IOException e) {
- e.printStackTrace();
- } finally {
- try {
- bufferWriter.close();
- } catch (IOException e) {
- e.printStackTrace();
- }
- }
-
- */
+        return message;
     }
 }
+
