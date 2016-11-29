@@ -42,11 +42,6 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".HealthInfoActivity"
-            android:label="Add Data Point">
-        </activity>
-
-        <activity
             android:name=".GoalsActivity"
             android:label="Today">
         </activity>

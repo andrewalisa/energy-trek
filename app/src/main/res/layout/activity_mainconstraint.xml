@@ -21,34 +21,6 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:text="Today"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:id="@+id/btnToday"
-        android:layout_width="325dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/btnPT"
-        android:layout_alignStart="@+id/btnPT"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
-        android:onClick="today (MainActivity)" />
-
-    <Button
-        android:text="Previous Treks"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnPT"
-        android:layout_width="160dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="17dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
-        android:layout_above="@+id/btnToday"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="21dp"
-        android:onClick="previousTreks (MainActivity)" />
-
-    <Button
         android:text="Your Trek Profile"
         android:layout_height="wrap_content"
         android:id="@+id/btnProfile"
@@ -61,4 +33,29 @@
         android:layout_alignEnd="@+id/btnToday"
 
         android:onClick="profile (MainActivity)" />
+
+    <Button
+        android:text="Today"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/btnToday"
+        android:layout_width="325dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
+        android:onClick="today (MainActivity)"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Previous Treks"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPT"
+        android:layout_width="160dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
+        android:layout_marginBottom="19dp"
+        android:onClick="previousTreks (MainActivity)"
+        android:layout_above="@+id/btnToday"
+        android:layout_alignLeft="@+id/btnToday"
+        android:layout_alignStart="@+id/btnToday" />
 </android.widget.RelativeLayout>

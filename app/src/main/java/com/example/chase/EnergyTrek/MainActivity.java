@@ -61,12 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    /** Called when the user clicks the Enter Health Info. button */
-    public void enterHealthInfo(View view) {
-        Intent healthInfoIntent = new Intent(this, HealthInfoActivity.class);
-        startActivity(healthInfoIntent);
-    }
+    
 
 
 

@@ -6,41 +6,6 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="Please Choose One:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:layout_marginRight="20dp"
-        android:gravity="center"/>
-
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-        <RadioButton android:id="@+id/radio_water"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="@string/radio_water"
-            android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/radio_calories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:text="@string/radio_calories"
-            android:onClick="onRadioButtonClicked"
-            android:checked="true" />
-        <RadioButton android:id="@+id/radio_sleep"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radio_sleep"
-            android:onClick="onRadioButtonClicked"/>
-    </RadioGroup>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -49,30 +14,47 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <DatePicker
-            android:layout_height="199dp"
-            android:id="@+id/datePicker2"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="20dp"
-            android:scrollbarStyle="insideOverlay"
-            android:startYear="2015"
-            android:datePickerMode="spinner"
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/radio_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/radio_water"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/radio_calories"
+                android:onClick="onRadioButtonClicked"
+                android:checked="true" />
+            <RadioButton android:id="@+id/radio_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_sleep"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="Please Choose One:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
             android:layout_marginRight="20dp"
-            android:layout_width="280dp"
-            android:endYear="2016"
-            android:spinnersShown="true"
-            android:elevation="1dp"
-            android:calendarViewShown="false" />
-
-
-        <EditText
-            android:id="@+id/calories"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:hint="Calories consumed per day"
-            android:inputType="time" />
+            android:gravity="center"/>
 
         <Button
             android:id="@+id/enterButton"
@@ -80,13 +62,26 @@
             android:text="@string/button_enter"
             android:gravity="center"
             android:layout_gravity="start"
-            android:layout_marginLeft="90dp"
-            android:layout_marginTop="50dp"
             android:onClick="enter"
             android:background="@android:color/black"
             android:textColor="@android:color/white"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/menuButton"
+            android:layout_centerHorizontal="true" />
 
+        <EditText
+            android:id="@+id/calories"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:hint="Calories consumed per day"
+            android:inputType="time"
+            android:layout_marginBottom="29dp"
+            android:layout_above="@+id/enterButton"
+            android:layout_alignRight="@+id/menuButton"
+            android:layout_alignEnd="@+id/menuButton"
+            android:gravity="center_vertical|center_horizontal" />
 
         <Button
             android:id="@+id/menuButton"
@@ -95,11 +90,25 @@
             android:text="Main Menu"
             android:gravity="center"
             android:layout_gravity="start"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="50dp"
             android:onClick="menu"
             android:background="@android:color/black"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="19dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
-    </LinearLayout>
+        <DatePicker
+            android:layout_height="199dp"
+            android:id="@+id/datePicker2"
+            android:scrollbarStyle="insideOverlay"
+            android:startYear="2015"
+            android:datePickerMode="spinner"
+            android:layout_width="280dp"
+            android:endYear="2016"
+            android:spinnersShown="true"
+            android:elevation="1dp"
+            android:calendarViewShown="false"
+            android:layout_above="@+id/calories"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 </LinearLayout>

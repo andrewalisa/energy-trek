@@ -16,16 +16,92 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:gravity="center"
+        android:layout_gravity="start"
+        android:onClick="enter"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="67dp"
+        android:layout_above="@+id/btnMenu"
+        android:layout_alignLeft="@+id/weight"
+        android:layout_alignStart="@+id/weight"
+        android:layout_alignRight="@+id/weight"
+        android:layout_alignEnd="@+id/weight" />
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:id="@+id/textView2"
-        android:text="Hello! We're working on a way to better serve you. Check back later for User Profile functionality."
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
+        android:ems="10"
+        android:id="@+id/weight"
+        android:hint="Weight (in lbs)"
+        android:inputType="number"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/height"
+        android:layout_alignStart="@+id/height" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/height"
+        android:hint="Height (in inches)"
+        android:layout_above="@+id/weight"
+        android:layout_alignLeft="@+id/age"
+        android:layout_alignStart="@+id/age"
+        android:layout_marginBottom="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/age"
+        android:hint="Age"
+        android:layout_marginBottom="21dp"
+        android:layout_above="@+id/height"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignRight="@+id/age"
+        android:layout_alignEnd="@+id/age"
+        android:layout_marginRight="45dp"
+        android:layout_marginEnd="45dp">
+
+        <RadioButton
+            android:text="Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:id="@+id/male"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/female"
+            android:layout_toStartOf="@+id/female"
+            android:layout_marginRight="18dp"
+            android:layout_marginEnd="18dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="Female"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:id="@+id/female"
+            android:checked="false"
+            android:layout_marginRight="21dp"
+            android:layout_marginEnd="21dp"
+            android:layout_alignBaseline="@+id/male"
+            android:layout_alignBottom="@+id/male"
+            android:layout_alignRight="@+id/age"
+            android:layout_alignEnd="@+id/age" />
+    </RadioGroup>
+
 </RelativeLayout>
