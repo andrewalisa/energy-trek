@@ -109,6 +109,7 @@
             android:elevation="1dp"
             android:calendarViewShown="false"
             android:layout_above="@+id/calories"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:descendantFocusability="blocksDescendants"/>
     </RelativeLayout>
 </LinearLayout>
